@@ -1,0 +1,126 @@
+:root {
+    --header-color: #517891;
+    --text-color: #fff;
+    --card-color: rgb(130, 174, 202);
+    --footer-color: #083049;
+
+    /* new additions */
+    --bg-main: #ffffff;
+    --hover-color: #b6daf0;
+    --transition: 0.3s ease;
+}
+
+/* base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* elements */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* classes */
+.container {
+    background-color: var(--card-color);
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 1000px;
+
+    /* subtle shadow = instant upgrade */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* grid layouts */
+.projects-grid,
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* cards */
+.project-card,
+.skill-card {
+    background-color: var(--header-color);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.project-card:hover,
+.skill-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--hover-color);
+}
+
+/* buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--header-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+/* links */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+/* footer (you defined color, now use it) */
+footer {
+    background-color: var(--footer-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* combos */
+h1, h2 {
+    color: var(--text-color);
+}
+
+/* responsive tweak */
+@media (max-width: 600px) {
+    section {
+        padding: 1rem;
+    }
+
+    .container {
+        margin: 0.5rem;
+    }
+}

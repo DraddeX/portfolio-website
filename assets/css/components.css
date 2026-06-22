@@ -1,0 +1,220 @@
+.container {
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    min-height: 16rem;
+    padding: 2.5rem;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+
+    color: var(--text);
+    gap: 2.5rem;
+
+    transition: box-shadow 0.2s ease;
+}
+
+.container:hover {
+    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.container h2 {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.container h3 {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.container div {
+    margin-bottom: 0.75rem;
+}
+
+.container p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.experience-item {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.experience-item p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.65rem 1.4rem;
+
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.link:hover {
+    background-color: #4F46E5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+/* ── Project detail page ── */
+
+.project-hero {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 1.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.project-back a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    transition: opacity 0.2s;
+}
+
+.project-back a:hover { opacity: 0.7; }
+
+.project-hero h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.project-hero p {
+    color: var(--text-muted);
+    line-height: 1.75;
+    max-width: 640px;
+    margin-bottom: 1.25rem;
+}
+
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    background-color: var(--accent-glow);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.project-gallery-section {
+    margin-bottom: 1.75rem;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.project-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.detail-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.detail-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.1);
+}
+
+.detail-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.detail-card p, .detail-card li {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.detail-card ul {
+    padding-left: 0;
+}
+
+.detail-card li {
+    padding: 0.2rem 0;
+}
+
+.detail-card li::before {
+    content: '→ ';
+    color: var(--accent);
+    font-weight: 600;
+}

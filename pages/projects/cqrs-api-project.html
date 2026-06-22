@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/components.css" />
+    <link rel="stylesheet" href="../../assets/css/cards.css" />
+    <title>CQRS API Project</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>CQRS API Project</h1>
+      </div>
+      <nav class="navbar">
+        <div class="navbar-items">
+          <li class="navbar-item"><a href="../../index.html">Home</a></li>
+          <li class="navbar-item"><a href="../../pages/skills.html">Skills</a></li>
+          <li class="navbar-item"><a href="../../pages/projects.html">Projects</a></li>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="project-hero">
+        <div class="project-back">
+          <a href="../../pages/projects.html">← Back to Projects</a>
+        </div>
+        <h2>CQRS REST API</h2>
+        <p>
+          A REST API built around the CQRS (Command Query Responsibility Segregation)
+          pattern, first explored during my internship at VandenBroele. Uses Minimal
+          APIs for a lightweight surface, Sqids for obfuscated public IDs, and JWT
+          for secured endpoints.
+        </p>
+        <div class="badge-row">
+          <span class="badge">ASP.NET Core</span>
+          <span class="badge">C#</span>
+          <span class="badge">CQRS</span>
+          <span class="badge">Minimal API</span>
+          <span class="badge">JWT Auth</span>
+          <span class="badge">Sqids</span>
+          <span class="badge">Entity Framework Core</span>
+        </div>
+        <a href="#" class="link">View on GitHub</a>
+      </section>
+
+      <!-- Gallery -->
+      <section class="project-gallery-section">
+        <h3 class="section-label">Screenshots</h3>
+        <div class="gallery">
+          <img src="project1.jpg" alt="Project screenshot 1" />
+          <img src="project2.jpg" alt="Project screenshot 2" />
+          <img src="project3.jpg" alt="Project screenshot 3" />
+        </div>
+      </section>
+
+      <!-- Details -->
+      <section class="project-details">
+
+        <div class="detail-card">
+          <h3>What I built</h3>
+          <p>
+            A clean API following the CQRS pattern — commands mutate state, queries
+            read it, and neither path shares logic. Endpoints are defined with
+            Minimal APIs to keep the surface small. Sqids replace integer IDs in
+            public URLs to prevent enumeration, and JWT protects secured routes.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <h3>What I learned</h3>
+          <ul>
+            <li>Applying CQRS to cleanly separate reads from writes</li>
+            <li>Using Minimal APIs for a lean, explicit routing setup</li>
+            <li>Obfuscating database IDs with Sqids</li>
+            <li>Structuring a project for scalability without over-engineering</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Tech stack</h3>
+          <ul>
+            <li><strong>Backend:</strong> ASP.NET Core, C#</li>
+            <li><strong>Pattern:</strong> CQRS, Minimal API</li>
+            <li><strong>Auth:</strong> JWT Bearer tokens</li>
+            <li><strong>IDs:</strong> Sqids</li>
+            <li><strong>Database:</strong> Entity Framework Core</li>
+            <li><strong>Tools:</strong> Visual Studio, GitHub</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+  </body>
+</html>

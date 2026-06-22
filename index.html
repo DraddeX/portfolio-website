@@ -1,50 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/cards.css" />
     <title>Home</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <div>
-            <h1>Oscar Dereu</h1>
+      <div>
+        <h1>Oscar Dereu</h1>
+      </div>
+
+      <nav class="navbar">
+        <div class="navbar-items">
+          <li class="navbar-item">
+            <a href="#">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="pages/skills.html">Skills</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="pages/projects.html">Projects</a>
+          </li>
         </div>
-        
-        <nav class="navbar">
-            <div class="navbar-items">
-                <li class="navbar-item">
-                    <a href="pages/about.html">About</a>
-                </li>
-    
-                <li class="navbar-item">
-                    <a href="pages/skills.html">Vaardigheden</a>
-                </li>
-    
-                <li class="navbar-item">
-                    <a href="pages/projects.html">Projecten</a>
-                </li> 
-            </div>
-        </nav>
+      </nav>
     </header>
 
-    <section class="container">
-        <img src="assets/images/self.webp" alt="picture" id="self">
+    <main>
+      <section class="container">
+        <img src="assets/images/self.webp" alt="picture" id="self" />
+
         <div>
-            <h2>About Me</h2>
+          <h2>Introductie</h2>
+
+          <p>
+            Tijdens mijn opleiding heb ik voornamelijk gewerkt met .NET C# en
+            JavaScript. Hoewel .NET mijn sterkste omgeving is, leer ik graag
+            nieuwe technologieën kennen. Tijdens mijn stage bij Vanden Broele
+            kreeg ik bijvoorbeeld de kans om te werken met Vue 3 en TypeScript.
+          </p>
+
+          <p>
+            AI zie ik als een waardevolle tool, vooral voor het genereren van
+            testdata en als ondersteuning tijdens het ontwikkelen. Daarbij
+            blijft het belangrijk om kritisch te blijven en resultaten steeds te
+            controleren.
+          </p>
+
+          <p>
+            Op de werkvloer vind ik groeimogelijkheden, samenwerking en een
+            positieve sfeer belangrijk. Ik sta open voor feedback en zie het als
+            een kans om mezelf en het team verder te verbeteren.
+          </p>
+        </div>
+      </section>
+
+      <section class="container">
+        <div>
+          <h2>Werkervaring</h2>
+
+          <div class="experience-item">
+            <h3>E.P.G Sawa</h3>
             <p>
-                Al sinds ik kind was, ben ik altijd al gefascineerd geweest door technologie. Games, het bouwen van pc’s en uiteindelijk
-                ook programmeren. Het uitwerken van concepten tot een volledig functionele applicatie is iets waar ik echt van geniet
-                om deel van uit te maken. Vooral vind ik het interessant om te zien welke problemen een relatief simpel programma kan oplossen.
+              Juni 2016 - Augustus 2016 | Blankenberge<br />
+              Student, kelner.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Hotel Liberty</h3>
+            <p>
+              Juni 2017 - Augustus 2017 | Blankenberge<br />
+              Student, afwas en schoonmaak.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Hotel Pantheon Palace - Hotel Saint Sauveur</h3>
+            <p>
+              Mei 2021 - Juni 2021 | Blankenberge<br />
+              Student assistent ontbijt, onderhoud ontbijtbuffet en schoonmaak.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Wallenius Wilhelmsen</h3>
+            <p>
+              2022 | Zeebrugge<br />
+              Carrossier, koetswerk op graafmachines.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Group Caus</h3>
+            <p>
+              2023 - 2025 | Zeebrugge<br />
+              Student, auto’s wassen en transport naar carwash/garages.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Hotel Beach Palace</h3>
+            <p>
+              Maart 2026 - Heden | Blankenberge<br />
+              Student, afwas en aanvullen van linnen.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>VandenBroele</h3>
+            <p>
+              Maart 2026 - Mei 2026 | Brugge<br />
+              Stagiair developer: API opzetten en koppelen aan Vue 3 frontend.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="card">
+          <h2>Educatie</h2>
+
+          <div class="experience-item">
+            <h3>Carrosserie</h3>
+            <p>2015 - 2021 | Kta Brugge</p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Graduaat programmeren</h3>
+            <p>2023 - 2026 | Howest Brugge</p>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Talen</h2>
+
+          <ul>
+            <li>Nederlands (moedertaal)</li>
+            <li>Frans (goed)</li>
+            <li>Engels (vloeiend)</li>
+          </ul>
+      </div>
+      <div class="card">
+          <h2>Hobbies</h2>
+
+          <ul>
+            <li>programmeren</li>
+            <li>Tekenen</li>
+            <li>Fitness</li>
+            <li>Lopen</li>
+            <li>Bowling</li>
+            <li>PC building</li>
+          </ul>
+      </div>
+      </section>
+      <section class="container">
+        <div>
+            <h2>Contact gegevens</h2>
+
+            <p>
+                tel: 0497 28 66 10
             </p>
 
+            <p>
+                email: odereu627@gmail.com
+            </p>
 
-            <a href="pages/about.html" class="link">Learn more →</a>
         </div>
-    </section>
 
-</body>
+      </section>
+    </main>
+  </body>
 </html>

@@ -74,6 +74,11 @@ header nav a:hover {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
+header nav a.active {
+    color: var(--surface);
+    background-color: var(--accent);
+}
+
 li {
     list-style: none;
 }
@@ -89,4 +94,8 @@ img {
     height: 20rem;
     border-radius: 12px;
     object-fit: cover;
+}
+
+#self {
+    border-radius: 20rem;
 }

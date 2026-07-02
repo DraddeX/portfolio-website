@@ -99,3 +99,7 @@ img {
 #self {
     border-radius: 20rem;
 }
+
+p {
+    margin-bottom: 0.5rem;
+}

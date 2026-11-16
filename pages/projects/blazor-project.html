@@ -46,35 +46,59 @@
           in staat om hun kaarten te bekijken en te doorzoeken met verschillende
           filters.
         </p>
-        <div class="badge-row">
-          <span class="badge">Blazor</span>
-          <span class="badge">C#</span>
-          <span class="badge">CSV Import</span>
-          <span class="badge">LINQ</span>
-          <span class="badge">Filtering</span>
-        </div>
+
+        <dl class="project-facts">
+          <div>
+            <dt>Type</dt>
+            <dd>Single-page app</dd>
+          </div>
+          <div>
+            <dt>Doel</dt>
+            <dd>Karuta-collecties doorzoeken</dd>
+          </div>
+          <div>
+            <dt>Getest met</dt>
+            <dd>8.716 kaarten</dd>
+          </div>
+        </dl>
       </section>
 
       <section class="project-gallery-section">
-        <h3 class="section-label">Screenshots</h3>
+        <h3 class="section-label">
+          Screenshots <span class="section-hint">· klik om te vergroten</span>
+        </h3>
         <div class="gallery">
-          <img
-            src="../../assets/images/sheets-manager-1.png"
-            alt="Projectscreenshot 1"
-          />
-          <img
-            src="../../assets/images/sheets-manager-2.png"
-            alt="Projectscreenshot 2"
-          />
-          <img
-            src="../../assets/images/karuta-top-gg-image.png"
-            alt="Projectscreenshot 3"
-          />
+          <figure>
+            <img
+              src="../../assets/images/sheets-manager-1.png"
+              alt="Karuta Sheets Manager met een ingeladen CSV van 8716 kaarten, filters bovenaan en een tabel met code, personage, serie, print, editie, kwaliteit en tag"
+            />
+            <figcaption>
+              Een volledige collectie van 8.716 kaarten, ingeladen vanuit één
+              CSV-bestand
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../../assets/images/sheets-manager-2.png"
+              alt="Gefilterde weergave: serie Dragon Ball Z met vier sterren kwaliteit, 11 van 8716 kaarten zichtbaar"
+            />
+            <figcaption>Filteren op serie en kwaliteit: 11 van 8.716 kaarten</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../../assets/images/karuta-top-gg-image.png"
+              alt="De pagina van de Karuta Discord-bot op top.gg"
+            />
+            <figcaption>
+              Karuta, de Discord-bot waarvoor deze tool gemaakt is
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="project-details">
-        <div class="detail-card">
+        <div class="detail-card detail-card--wide">
           <h3>Wat ik heb gebouwd</h3>
           <p>
             Een single-page Blazor-applicatie ontworpen om Karuta-
@@ -87,7 +111,40 @@
           </p>
         </div>
 
-        <div class="detail-card">
+        <div class="detail-card detail-card--side">
+          <h3>Technische stack</h3>
+          <div class="stack-group">
+            <span class="stack-label">Framework</span>
+            <div class="badge-row">
+              <span class="badge">Blazor</span>
+              <span class="badge">C#</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Data</span>
+            <div class="badge-row">
+              <span class="badge">CSV-parsing</span>
+              <span class="badge">LINQ</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Frontend</span>
+            <div class="badge-row">
+              <span class="badge">Razor Components</span>
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Tools</span>
+            <div class="badge-row">
+              <span class="badge">Visual Studio</span>
+              <span class="badge">GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-card detail-card--wide detail-card--list">
           <h3>Wat ik heb geleerd</h3>
           <ul>
             <li>Interactieve gebruikersinterfaces bouwen met Blazor</li>
@@ -97,17 +154,6 @@
               Herbruikbare componenten ontwerpen in een single-page applicatie
             </li>
             <li>Applicatiestatus beheren binnen Blazor-componenten</li>
-          </ul>
-        </div>
-
-        <div class="detail-card">
-          <h3>Technische Stack</h3>
-          <ul>
-            <li><strong>Framework:</strong> Blazor</li>
-            <li><strong>Taal:</strong> C#</li>
-            <li><strong>Gegevensverwerking:</strong> CSV Parsing, LINQ</li>
-            <li><strong>Frontend:</strong> Razor Components, HTML, CSS</li>
-            <li><strong>Tools:</strong> Visual Studio, GitHub</li>
           </ul>
         </div>
       </section>

@@ -59,6 +59,16 @@
         grid-template-columns: 1fr;
     }
 
+    .detail-card--wide,
+    .detail-card--side {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .detail-card--list ul {
+        columns: 1;
+    }
+
     .projects-grid {
         width: 90%;
         grid-template-columns: 1fr;
@@ -94,8 +104,8 @@
         grid-template-columns: 1fr;
     }
 
-    .gallery img {
-        height: 10rem;
+    .project-hero {
+        padding: 1.5rem;
     }
 
     .badge-row {

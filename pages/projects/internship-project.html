@@ -56,46 +56,60 @@
             schrijven van onderhoudbare code.
           </p>
 
-          <div class="badge-row">
-            <span class="badge">ASP.NET Core</span>
-            <span class="badge">Minimal API</span>
-            <span class="badge">C#</span>
-            <span class="badge">CQRS</span>
-            <span class="badge">MediatR</span>
-            <span class="badge">Caching</span>
-            <span class="badge">xUnit</span>
-            <span class="badge">Docker</span>
-            <span class="badge">IdentityServer4</span>
-            <span class="badge">Refit</span>
-            <span class="badge">Vue 3</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">Pinia</span>
-            <span class="badge">Vue Router</span>
-            <span class="badge">BFF</span>
-          </div>
+          <dl class="project-facts">
+            <div>
+              <dt>Type</dt>
+              <dd>Stage</dd>
+            </div>
+            <div>
+              <dt>Bedrijf</dt>
+              <dd>Vanden Broele</dd>
+            </div>
+            <div>
+              <dt>Team</dt>
+              <dd>Helix</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>API V2 + Vue 3-frontend</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section class="project-gallery-section">
-        <h3 class="section-label">Screenshots</h3>
+        <h3 class="section-label">
+          Screenshots <span class="section-hint">· klik om te vergroten</span>
+        </h3>
         <div class="gallery">
-          <img
-            src="../../assets/images/vba-clients-view.png"
-            alt="Projectscreenshot 1"
-          />
-          <img
-            src="../../assets/images/vba-create-scope-view.png"
-            alt="Projectscreenshot 2"
-          />
-          <img
-            src="../../assets/images/bva-create-clients-view.png"
-            alt="Projectscreenshot 3"
-          />
+          <figure>
+            <img
+              src="../../assets/images/vba-clients-view.png"
+              alt="Overzicht van API-clients met zoekveld, sorteerbare kolommen en een knop voor een nieuwe client"
+            />
+            <figcaption>
+              Overzicht van alle API-clients, doorzoekbaar en sorteerbaar
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../../assets/images/bva-create-clients-view.png"
+              alt="Formulier voor een nieuwe client met een validatiefout: Client ID must be in kebab-case"
+            />
+            <figcaption>Nieuwe client aanmaken, met validatie op de Client ID</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../../assets/images/vba-create-scope-view.png"
+              alt="Formulier voor een nieuwe API-scope met verplichte velden die rood oplichten"
+            />
+            <figcaption>Nieuwe API-scope aanmaken met verplichte velden</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="project-details">
-        <div class="detail-card">
+        <div class="detail-card detail-card--wide">
           <h3>Wat ik heb gebouwd</h3>
           <p>
             Ik ontwikkelde de tweede versie van een bestaande API met ASP.NET
@@ -107,42 +121,66 @@
           </p>
         </div>
 
-        <div class="detail-card">
+        <div class="detail-card detail-card--side">
+          <h3>Technische stack</h3>
+          <div class="stack-group">
+            <span class="stack-label">Backend</span>
+            <div class="badge-row">
+              <span class="badge">ASP.NET Core</span>
+              <span class="badge">Minimal API</span>
+              <span class="badge">C#</span>
+              <span class="badge">CQRS</span>
+              <span class="badge">MediatR</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Frontend</span>
+            <div class="badge-row">
+              <span class="badge">Vue 3</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">Pinia</span>
+              <span class="badge">Vue Router</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Auth &amp; architectuur</span>
+            <div class="badge-row">
+              <span class="badge">IdentityServer4</span>
+              <span class="badge">BFF</span>
+              <span class="badge">Refit</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Testen &amp; tools</span>
+            <div class="badge-row">
+              <span class="badge">xUnit</span>
+              <span class="badge">Docker</span>
+              <span class="badge">Git</span>
+              <span class="badge">Azure DevOps</span>
+              <span class="badge">Visual Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-card detail-card--wide detail-card--list">
           <h3>Wat ik heb geleerd</h3>
           <ul>
             <li>
-              Het CQRS-patroon toepassen met commands, queries en handlers
+              Een API opsplitsen in commands, queries en handlers volgens het
+              CQRS-patroon
             </li>
-            <li>ASP.NET Core Minimal APIs bouwen en testen</li>
-            <li>Caching-strategieën implementeren</li>
-            <li>Unit tests schrijven met xUnit</li>
-            <li>Werken met Docker tijdens de ontwikkeling</li>
-            <li>IdentityServer4 gebruiken voor authenticatie</li>
-            <li>De Backend for Frontend (BFF) architectuur begrijpen</li>
-            <li>API's consumeren met Refit</li>
+            <li>Minimal API-endpoints bouwen en ze afdekken met unit tests in xUnit</li>
+            <li>Caching-strategieën toepassen binnen een bestaande API</li>
             <li>
-              Vue 3-applicaties ontwikkelen met TypeScript, Pinia en Vue Router
-            </li>
-            <li>Werken in een Agile ontwikkelteam</li>
-          </ul>
-        </div>
-
-        <div class="detail-card">
-          <h3>Technische stack</h3>
-          <ul>
-            <li>
-              <strong>Backend:</strong> ASP.NET Core Minimal APIs, C#, CQRS
+              Authenticatie regelen met IdentityServer4 binnen een Backend for
+              Frontend (BFF)-architectuur
             </li>
             <li>
-              <strong>Frontend:</strong> Vue 3, TypeScript, Pinia, Vue Router
+              Een Vue 3-frontend met TypeScript, Pinia en Vue Router koppelen aan
+              de API via Refit
             </li>
-            <li><strong>Authenticatie:</strong> IdentityServer4</li>
-            <li><strong>Architectuur:</strong> Backend for Frontend (BFF)</li>
-            <li><strong>Communicatie:</strong> Refit</li>
-            <li><strong>Testen:</strong> xUnit</li>
-            <li>
-              <strong>Tools:</strong> Docker, Git, Azure DevOps, Visual Studio
-            </li>
+            <li>Docker gebruiken als vast onderdeel van de ontwikkelomgeving</li>
+            <li>Samenwerken in een Agile ontwikkelteam</li>
           </ul>
         </div>
       </section>

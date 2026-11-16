@@ -47,37 +47,56 @@
           oppervlak, Sqids voor geobfusceerde publieke ID's en JWT voor
           beveiligde endpoints.
         </p>
-        <div class="badge-row">
-          <span class="badge">ASP.NET Core</span>
-          <span class="badge">C#</span>
-          <span class="badge">CQRS</span>
-          <span class="badge">Minimal API</span>
-          <span class="badge">JWT Auth</span>
-          <span class="badge">Sqids</span>
-          <span class="badge">Entity Framework Core</span>
-        </div>
+
+        <dl class="project-facts">
+          <div>
+            <dt>Type</dt>
+            <dd>REST API</dd>
+          </div>
+          <div>
+            <dt>Aanleiding</dt>
+            <dd>Verdieping na mijn stage</dd>
+          </div>
+          <div>
+            <dt>Documentatie</dt>
+            <dd>Scalar (OpenAPI 3.1)</dd>
+          </div>
+        </dl>
       </section>
 
       <section class="project-gallery-section">
-        <h3 class="section-label">Screenshots</h3>
+        <h3 class="section-label">
+          Screenshots <span class="section-hint">· klik om te vergroten</span>
+        </h3>
         <div class="gallery">
-          <img
-            src="../../assets/images/api-scalar.png"
-            alt="Projectscreenshot 1"
-          />
-          <img
-            src="../../assets/images/api-scalar-2.png"
-            alt="Projectscreenshot 2"
-          />
-          <img
-            src="../../assets/images/api-scalar-3.png"
-            alt="Projectscreenshot 3"
-          />
+          <figure>
+            <img
+              src="../../assets/images/api-scalar.png"
+              alt="Scalar API-documentatie van Web.Shop.Api met endpoints voor auth, users, categories, products, orders, carts, payments, shipments, addresses en reviews"
+            />
+            <figcaption>
+              Interactieve API-documentatie in Scalar met alle endpoints
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../../assets/images/api-scalar-2.png"
+              alt="Een GET-request naar /api/products klaarzetten in de Scalar API-client"
+            />
+            <figcaption>Een request naar /api/products klaarzetten</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../../assets/images/api-scalar-3.png"
+              alt="Het antwoord van /api/products: 200 OK in 16 ms met een JSON-lijst van producten"
+            />
+            <figcaption>Het antwoord: 200 OK in 16 ms, als JSON</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="project-details">
-        <div class="detail-card">
+        <div class="detail-card detail-card--wide">
           <h3>Wat ik heb gebouwd</h3>
           <p>
             Een overzichtelijke API volgens het CQRS-patroon — commands wijzigen
@@ -89,7 +108,41 @@
           </p>
         </div>
 
-        <div class="detail-card">
+        <div class="detail-card detail-card--side">
+          <h3>Technische stack</h3>
+          <div class="stack-group">
+            <span class="stack-label">Backend</span>
+            <div class="badge-row">
+              <span class="badge">ASP.NET Core</span>
+              <span class="badge">C#</span>
+              <span class="badge">Minimal API</span>
+              <span class="badge">CQRS</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Beveiliging</span>
+            <div class="badge-row">
+              <span class="badge">JWT</span>
+              <span class="badge">Sqids</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Database</span>
+            <div class="badge-row">
+              <span class="badge">Entity Framework Core</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Tools</span>
+            <div class="badge-row">
+              <span class="badge">Visual Studio</span>
+              <span class="badge">GitHub</span>
+              <span class="badge">Scalar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-card detail-card--wide detail-card--list">
           <h3>Wat ik heb geleerd</h3>
           <ul>
             <li>CQRS toepassen om lezen en schrijven duidelijk te scheiden</li>
@@ -101,18 +154,6 @@
               Een project structureren voor schaalbaarheid zonder
               over-engineering
             </li>
-          </ul>
-        </div>
-
-        <div class="detail-card">
-          <h3>Technische stack</h3>
-          <ul>
-            <li><strong>Backend:</strong> ASP.NET Core, C#</li>
-            <li><strong>Patroon:</strong> CQRS, Minimal API</li>
-            <li><strong>Authenticatie:</strong> JWT Bearer tokens</li>
-            <li><strong>ID's:</strong> Sqids</li>
-            <li><strong>Database:</strong> Entity Framework Core</li>
-            <li><strong>Tools:</strong> Visual Studio, GitHub</li>
           </ul>
         </div>
       </section>

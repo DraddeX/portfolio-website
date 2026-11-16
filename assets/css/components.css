@@ -120,6 +120,30 @@
     margin-bottom: 1.25rem;
 }
 
+/* Quick facts strip under the project title */
+.project-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+}
+
+.project-facts dt {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.project-facts dd {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
 .badge-row {
     display: flex;
     flex-wrap: wrap;
@@ -150,31 +174,102 @@
     margin-bottom: 1rem;
 }
 
+.section-hint {
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Gallery: first screenshot featured full width, the rest two per row */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1rem;
+}
+
+.gallery figure:first-child {
+    grid-column: 1 / -1;
 }
 
 .gallery img {
+    display: block;
     width: 100%;
-    height: 14rem;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;          /* show the whole screen, never crop it */
+    background: var(--surface);
     border-radius: 10px;
     border: 1px solid var(--border);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.gallery figure:first-child img {
+    aspect-ratio: auto;           /* featured image keeps its own shape */
+    max-height: 32rem;
+}
+
 .gallery img:hover {
-    transform: scale(1.02);
+    transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
+.gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Detail cards: "built" and "learned" stacked on the left (wide),
+   tech stack running down the right side next to both */
 .project-details {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;           /* cards keep their own height, no empty space */
     gap: 1rem;
     margin-bottom: 2rem;
+}
+
+.detail-card--wide {
+    grid-column: 1 / span 2;
+}
+
+.detail-card--side {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.detail-card--list ul {
+    columns: 2;
+    column-gap: 2.5rem;
+}
+
+.detail-card--list li {
+    break-inside: avoid;          /* keep each point in one column */
+}
+
+/* Tech stack as labelled badge groups */
+.stack-group + .stack-group {
+    margin-top: 0.9rem;
+}
+
+.stack-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}
+
+.stack-group .badge-row {
+    gap: 0.35rem;
+    margin-bottom: 0;
+}
+
+.stack-group .badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
 }
 
 .detail-card {
@@ -211,13 +306,17 @@
 }
 
 .detail-card li {
-    padding: 0.2rem 0;
+    position: relative;
+    padding: 0.2rem 0 0.2rem 1.4rem;
 }
 
+/* Check marks for "Wat ik heb geleerd"; hanging so wrapped lines stay aligned */
 .detail-card li::before {
-    content: '→ ';
+    content: '✓';
+    position: absolute;
+    left: 0;
     color: var(--accent);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* ── Projects grid ── */

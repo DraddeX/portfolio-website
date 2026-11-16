@@ -1,9 +1,15 @@
 /* Tablet: ≤ 768px */
 @media (max-width: 768px) {
 
+    /* The header stacks name + nav here, so the fixed header needs more height */
+    :root {
+        --header-h: 120px;
+    }
+
     header {
         flex-direction: column;
         align-items: flex-start;
+        justify-content: center;
         gap: 0.75rem;
         padding: 1rem 1.25rem;
     }
@@ -37,6 +43,14 @@
         grid-template-columns: 1fr;
     }
 
+    /* Undo the brick spans, or the 1-column grids grow an extra column */
+    .skill-category-card:nth-child(4n + 2),
+    .skill-category-card:nth-child(4n + 3),
+    .project-card:nth-child(4n + 1),
+    .project-card:nth-child(4n) {
+        grid-column: auto;
+    }
+
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -47,11 +61,17 @@
 
     .projects-grid {
         width: 90%;
+        grid-template-columns: 1fr;
     }
 }
 
 /* Mobile: ≤ 480px */
 @media (max-width: 480px) {
+
+    /* Smaller h1 here, so the stacked header is a bit shorter */
+    :root {
+        --header-h: 108px;
+    }
 
     header h1 {
         font-size: 1.25rem;

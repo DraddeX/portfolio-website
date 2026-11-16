@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oxanium:wght@500;600;700&display=swap");
-
 :root {
   --navy: #0f172a;
   --slate: #1e293b;
   --accent: crimson;
   --accent-light: #fff;
-  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent-glow: rgba(220, 20, 60, 0.15); /* crimson at 15% */
   --bg: #f8fafc;
   --surface: #ffffff;
   --text: #1e293b;

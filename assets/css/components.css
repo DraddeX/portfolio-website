@@ -20,7 +20,7 @@
 }
 
 .container:hover {
-    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px rgba(220, 20, 60, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .container h2 {
@@ -72,13 +72,14 @@
 
     border-radius: 8px;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
 }
 
 .link:hover {
     background-color: var(--accent-glow);
+    color: var(--accent);   /* white text would vanish on the pale hover background */
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 16px rgba(220, 20, 60, 0.4);
 }
 
 /* ── Project detail page ── */
@@ -133,7 +134,7 @@
     font-weight: 600;
     padding: 0.3rem 0.75rem;
     border-radius: 999px;
-    border: 1px solid rgba(99, 102, 241, 0.25);
+    border: 1px solid rgba(220, 20, 60, 0.25);
 }
 
 .project-gallery-section {
@@ -187,7 +188,7 @@
 
 .detail-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 4px 16px rgba(220, 20, 60, 0.1);
 }
 
 .detail-card h3 {
@@ -223,11 +224,21 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
-    width: 65%;
-    max-width: 960px;
+    width: 100%;             /* already inside <main>, which sets the page width */
     margin: 0 auto;
+}
+
+/* Brick pattern: wide, narrow / narrow, wide (repeats every 4 cards) */
+.project-card:nth-child(4n + 1),
+.project-card:nth-child(4n) {
+    grid-column: span 2;
+}
+
+/* Line up the "Bekijk project" links at the bottom of each row */
+.project-card .link {
+    margin-top: auto;
 }
 
 .project-card {
@@ -244,7 +255,7 @@
 
 .project-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 4px 24px rgba(220, 20, 60, 0.1);
 }
 
 .project-card h2 {

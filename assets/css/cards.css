@@ -28,7 +28,7 @@
 
 .skill-category-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px rgba(220, 20, 60, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .skill-category-card h2 {
@@ -55,7 +55,7 @@
     font-weight: 600;
     padding: 0.3rem 0.75rem;
     border-radius: 999px;
-    border: 1px solid rgba(99, 102, 241, 0.25);
+    border: 1px solid rgba(220, 20, 60, 0.25);
 }
 
 /* ── General cards ── */
@@ -77,7 +77,7 @@
 .card:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
+    box-shadow: 0 8px 24px rgba(220, 20, 60, 0.12);
 }
 
 .card h2 {

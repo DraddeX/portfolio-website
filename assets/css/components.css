@@ -76,7 +76,7 @@
 }
 
 .link:hover {
-    background-color: #4F46E5;
+    background-color: var(--accent-glow);
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
 }
@@ -292,3 +292,24 @@
     from { opacity: 0; transform: scale(0.95); }
     to   { opacity: 1; transform: scale(1); }
 }
+
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;              /* above everything, including your nav */
+  display: grid;
+  place-items: center;
+  background: #fff;        /* match your site's colors */
+  color: var(--accent);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.intro--hide {
+  opacity: 0;
+  visibility: hidden;         /* stops it blocking clicks after fading */
+}
+.intro__text { font-size: clamp(1.5rem, 4vw, 3rem); }
+.intro__cursor { animation: blink 0.8s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Stop the page scrolling while the intro is showing */
+body.intro-active { overflow: hidden; }

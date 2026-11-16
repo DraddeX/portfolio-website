@@ -8,9 +8,21 @@
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/cards.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oxanium:wght@500;600;700&display=swap"
+    />
+    <script src="assets/js/intro.js" defer></script>
     <title>Home</title>
   </head>
   <body>
+    <div id="intro" class="intro" aria-hidden="true">
+      <p class="intro__text">
+        <span id="intro-typed"></span><span class="intro__cursor">|</span>
+      </p>
+    </div>
     <header>
       <div>
         <h1>Oscar Dereu</h1>
@@ -149,8 +161,8 @@
             <li>Frans (goed)</li>
             <li>Engels (vloeiend)</li>
           </ul>
-      </div>
-      <div class="card">
+        </div>
+        <div class="card">
           <h2>Hobbies</h2>
 
           <ul>
@@ -161,24 +173,19 @@
             <li>Bowling</li>
             <li>PC building</li>
           </ul>
-      </div>
+        </div>
       </section>
       <section class="container">
         <div>
-            <h2>Contact gegevens</h2>
+          <h2>Contact gegevens</h2>
 
-            <p>
-                tel: 0497 28 66 10
-            </p>
+          <p>tel: 0497 28 66 10</p>
 
-            <p>
-                email: odereu627@gmail.com
-            </p>
-
+          <p>email: odereu627@gmail.com</p>
         </div>
-
       </section>
     </main>
+    <footer></footer>
     <script src="assets/js/nav-active.js"></script>
   </body>
 </html>

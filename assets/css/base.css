@@ -1,77 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oxanium:wght@500;600;700&display=swap");
 
 :root {
-    --navy: #0F172A;
-    --slate: #1E293B;
-    --accent: #6366F1;
-    --accent-light: #818CF8;
-    --accent-glow: rgba(99, 102, 241, 0.15);
-    --bg: #F8FAFC;
-    --surface: #FFFFFF;
-    --text: #1E293B;
-    --text-muted: #64748B;
-    --border: #E2E8F0;
+  --navy: #0f172a;
+  --slate: #1e293b;
+  --accent: crimson;
+  --accent-light: #fff;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --header-h: 80px;
+  --progress-h: 4px;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  padding-top: calc(var(--header-h) + var(--progress-h) + 2rem);
+  background-color: var(--bg);
 }
 
-header, main, footer {
-    margin-bottom: 2rem;
+main,
+footer {
+  margin-bottom: 2rem;
 }
 
 header {
-    background-color: var(--navy);
-    padding: 1rem 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-h);
+  z-index: 100;
+  background-color: var(--navy);
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Track + fill, sitting just under the fixed header */
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: var(--progress-h);
+}
 
-    border-bottom: 3px solid var(--accent);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+header::before {
+    background: var(--border);
+}
+
+header::after {
+    background: var(--accent);
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root);   /* must come after `animation` */
+}
+
+@keyframes scroll-progress {
+    to { transform: scaleX(1); }
 }
 
 header h1 {
-    color: var(--surface);
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+  color: var(--surface);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 header h1 span {
-    color: var(--accent-light);
+  color: var(--accent-light);
 }
 
 .navbar-items {
-    display: flex;
-    gap: 0.25rem;
-    list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
 }
 
 header nav a {
+    font-family: "Oxanium", "Inter", system-ui, sans-serif;
     color: #94A3B8;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.9rem;
 
     padding: 0.5rem 1rem;
     border-radius: 6px;
+    border: 2px solid transparent; 
 
-    transition: all 0.2s ease;
+    transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
 
 header nav a:hover {
     color: var(--surface);
-    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent);
+    background-color: rgba(166, 166, 166, 0.1);
+    box-shadow: 0 0 10px 5px var(--accent-glow);
 }
 
 header nav a.active {
@@ -79,27 +118,37 @@ header nav a.active {
     background-color: var(--accent);
 }
 
+/* Hovering the current page's link glows in your accent color instead of grey */
+header nav a.active:hover {
+    border-color: var(--accent-light);
+    box-shadow: 0 0 10px 5px var(--accent-glow);
+}
+
+h1, h2 {
+    font-family: "Oxanium", "Inter", system-ui, sans-serif;
+}
+
 li {
-    list-style: none;
+  list-style: none;
 }
 
 main {
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
-    max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  max-width: 960px;
 }
 
 img {
-    height: 20rem;
-    border-radius: 12px;
-    object-fit: cover;
+  height: 20rem;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 #self {
-    border-radius: 20rem;
+  border-radius: 20rem;
 }
 
 p {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }

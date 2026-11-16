@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="../../assets/css/components.css" />
     <link rel="stylesheet" href="../../assets/css/cards.css" />
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oxanium:wght@500;600;700&display=swap"
+    />
     <title>CQRS API-project</title>
   </head>
   <body>
@@ -18,14 +24,17 @@
       <nav class="navbar">
         <div class="navbar-items">
           <li class="navbar-item"><a href="../../index.html">Home</a></li>
-          <li class="navbar-item"><a href="../../pages/skills.html">Skills</a></li>
-          <li class="navbar-item"><a href="../../pages/projects.html">Projects</a></li>
+          <li class="navbar-item">
+            <a href="../../pages/skills.html">Skills</a>
+          </li>
+          <li class="navbar-item">
+            <a href="../../pages/projects.html">Projects</a>
+          </li>
         </div>
       </nav>
     </header>
 
     <main>
-
       <section class="project-hero">
         <div class="project-back">
           <a href="../../pages/projects.html">← Terug naar Projecten</a>
@@ -33,8 +42,8 @@
         <h2>CQRS REST API</h2>
         <p>
           Een REST API gebouwd rond het CQRS-patroon (Command Query
-          Responsibility Segregation), voor het eerst verkend tijdens mijn
-          stage bij VandenBroele. Gebruikt Minimal APIs voor een lichtgewicht
+          Responsibility Segregation), voor het eerst verkend tijdens mijn stage
+          bij VandenBroele. Gebruikt Minimal APIs voor een lichtgewicht
           oppervlak, Sqids voor geobfusceerde publieke ID's en JWT voor
           beveiligde endpoints.
         </p>
@@ -52,23 +61,31 @@
       <section class="project-gallery-section">
         <h3 class="section-label">Screenshots</h3>
         <div class="gallery">
-          <img src="../../assets/images/api-scalar.png" alt="Projectscreenshot 1" />
-          <img src="../../assets/images/api-scalar-2.png" alt="Projectscreenshot 2" />
-          <img src="../../assets/images/api-scalar-3.png" alt="Projectscreenshot 3" />
+          <img
+            src="../../assets/images/api-scalar.png"
+            alt="Projectscreenshot 1"
+          />
+          <img
+            src="../../assets/images/api-scalar-2.png"
+            alt="Projectscreenshot 2"
+          />
+          <img
+            src="../../assets/images/api-scalar-3.png"
+            alt="Projectscreenshot 3"
+          />
         </div>
       </section>
 
       <section class="project-details">
-
         <div class="detail-card">
           <h3>Wat ik heb gebouwd</h3>
           <p>
-            Een overzichtelijke API volgens het CQRS-patroon — commands
-            wijzigen de status, queries lezen die uit, en geen van beide
-            paden deelt logica. Endpoints worden gedefinieerd met Minimal
-            APIs om het oppervlak klein te houden. Sqids vervangen integer
-            ID's in publieke URL's om enumeratie te voorkomen, en JWT
-            beschermt beveiligde routes.
+            Een overzichtelijke API volgens het CQRS-patroon — commands wijzigen
+            de status, queries lezen die uit, en geen van beide paden deelt
+            logica. Endpoints worden gedefinieerd met Minimal APIs om het
+            oppervlak klein te houden. Sqids vervangen integer ID's in publieke
+            URL's om enumeratie te voorkomen, en JWT beschermt beveiligde
+            routes.
           </p>
         </div>
 
@@ -76,9 +93,14 @@
           <h3>Wat ik heb geleerd</h3>
           <ul>
             <li>CQRS toepassen om lezen en schrijven duidelijk te scheiden</li>
-            <li>Minimal APIs gebruiken voor een lichte, expliciete routing-opzet</li>
+            <li>
+              Minimal APIs gebruiken voor een lichte, expliciete routing-opzet
+            </li>
             <li>Database-ID's obfusceren met Sqids</li>
-            <li>Een project structureren voor schaalbaarheid zonder over-engineering</li>
+            <li>
+              Een project structureren voor schaalbaarheid zonder
+              over-engineering
+            </li>
           </ul>
         </div>
 
@@ -93,9 +115,7 @@
             <li><strong>Tools:</strong> Visual Studio, GitHub</li>
           </ul>
         </div>
-
       </section>
-
     </main>
     <script src="../../assets/js/lightbox.js"></script>
     <script src="../../assets/js/nav-active.js"></script>

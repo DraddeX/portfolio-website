@@ -2,16 +2,21 @@
 
 .skills-main {
     margin: 0 auto;
-    width: 65%;
-    max-width: 960px;
+    width: 80%;
+    max-width: 1100px;
 }
 
 .skills-columns {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
 }
 
+
+.skill-category-card:nth-child(4n + 2),
+.skill-category-card:nth-child(4n + 3) {
+    grid-column: span 2;
+}
 .skill-category-card {
     background: var(--surface);
     border: 1px solid var(--border);

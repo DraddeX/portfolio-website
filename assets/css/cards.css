@@ -108,11 +108,15 @@
 }
 
 .card ul li {
-    padding: 0.2rem 0;
+    position: relative;
+    padding: 0.2rem 0 0.2rem 1.25rem;
 }
 
+/* Hanging arrow: stays beside the text, wrapped lines line up under the text */
 .card ul li::before {
-    content: '→ ';
+    content: '→';
+    position: absolute;
+    left: 0;
     color: var(--accent);
     font-weight: 600;
 }

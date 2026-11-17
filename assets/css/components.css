@@ -42,6 +42,16 @@
     margin-bottom: 0.75rem;
 }
 
+/* A row of cards inside a container: all cards the same height */
+.container--cards {
+    align-items: stretch;
+}
+
+.container--cards > .card {
+    margin-bottom: 0;
+    min-width: 0;                 /* equal widths, even with long words inside */
+}
+
 .container p {
     color: var(--text-muted);
     line-height: 1.7;
